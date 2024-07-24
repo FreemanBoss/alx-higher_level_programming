@@ -7,8 +7,5 @@ import urllib.request
 
 
 url = sys.argv[1]
-try:
-    with urllib.request.urlopen(url) as response:
-        print(response.headers.get("X-Request-Id"))
-except Exception as e:
-    print(e)
+with urllib.request.urlopen(url) as response:
+    print(response.headers.get("X-Request-Id"))
